@@ -90,7 +90,7 @@ $ ps -e / -f / aux
 
 
 
-## 3. jobs - 백그라운드 작업 조
+## 3. jobs - 백그라운드 작업 조회
 - 명령어 설명<br>
 쉘에서 실행 중인 백그라운드 작업 또는 중지된 작업을 보여준다.
 
@@ -98,6 +98,53 @@ $ ps -e / -f / aux
 ```bash
 $ jobs 
 ```
+
+- 관련 명령어<br>
+fg %1 : 1번 작업을 포그라운드로
+bg %2 : 2번 작업을 백그라운드로 재실행
+
+- 화면 구성 요소
+
+| 항목     | 설명                                                        |
+|----------|-------------------------------------------------------------|
+| [번호]   | 작업 번호(Job ID). fg/bg 명령어에서 `%번호` 형태로 사용됨     |
+| 상태     | 실행 상태 (Running, Stopped, Suspended 등)                  |
+| 명령어   | 백그라운드로 실행 중인 실제 명령어                           |
+
+
+- 사용예시
+  <img width="334" height="67" alt="image" src="https://github.com/user-attachments/assets/b72c0cee-c2cf-462d-ba52-4dc3bbf8f320" />
+
+  
+
+## 4. kill - 프로세스 종료 / 신호 보내기
+- 명령어 설명<br>
+프로세스 종료뿐 아니라 실행 중지, 재개 같은 여러 신호(signal) 을 보낼 수 있다.
+
+-사용법
+```bash
+$ kill PID/ -9 PID/ -15 PID/ -18 PID/ -19 PID
+```
+
+-명령어 옵션
+
+| 옵션        | 설명                                   |
+|-------------|----------------------------------------|
+| -l          | 모든 시그널 목록 출력 (signal list)     |
+| -s SIGNAL   | 특정 시그널을 이름 또는 번호로 지정해 전송 |
+| -9          | SIGKILL(강제 종료) 전송                 |
+| -15         | SIGTERM(정상 종료 요청, 기본값) 전송     |
+| -STOP       | SIGSTOP(일시 정지) 전송                 |
+| -CONT       | SIGCONT(정지된 프로세스 재실행) 전송     |
+
+
+- 사용예시
+  <img width="1113" height="365" alt="image" src="https://github.com/user-attachments/assets/863bd2a7-5aa7-4fef-903c-a7acb61a154a" />
+
+
+
+
+
 
 
 
