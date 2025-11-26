@@ -113,6 +113,7 @@ bg %2 : 2번 작업을 백그라운드로 재실행
 
 
 - 사용예시
+  
   <img width="334" height="67" alt="image" src="https://github.com/user-attachments/assets/b72c0cee-c2cf-462d-ba52-4dc3bbf8f320" />
 
   
